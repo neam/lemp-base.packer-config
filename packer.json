@@ -1,0 +1,26 @@
+{
+    "description": "A Debian 7 TurnkeyLinux based LEMP-stack with memcache and yeoman (grunt-cli, npm, bower) installed",
+    "builders": [
+        {
+            "type": "docker",
+            "image": "turnkeylinux/nginx-php-fastcgi-13.0",
+            "export_path": "docker.tar"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "provision.sh"
+        }
+    ],
+    "post-processors": [
+        [
+            {
+                "type": "docker-import",
+                "repository": "neam/tkl-nginx-php-fastcgi-memcache-yeoman",
+                "tag": "0.0.1"
+            },
+            "docker-push"
+        ]
+    ]
+}
