@@ -1,5 +1,5 @@
 {
-    "description": "A Debian 7 TurnkeyLinux based LEMP-stack with memcache and yeoman (grunt-cli, npm, bower) installed",
+    "description": "A base image used and maintained by Neam Labs. Currently it is a Debian 7 TurnkeyLinux based LEMP-stack (Linux, Nginx, MySQL, PHP) with memcache and yeoman (grunt-cli, npm, bower) installed",
     "builders": [
         {
             "type": "docker",
@@ -17,8 +17,8 @@
         [
             {
                 "type": "docker-import",
-                "repository": "neam/tkl-nginx-php-fastcgi-memcache-yeoman",
-                "tag": "0.0.1"
+                "repository": "neam/lemp-base",
+                "tag": "latest"
             },
             "docker-push"
         ]
