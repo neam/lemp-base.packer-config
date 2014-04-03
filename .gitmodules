@@ -1,0 +1,3 @@
+[submodule "provisioning-shell-scripts"]
+	path = provisioning-shell-scripts
+	url = https://github.com/neam/provisioning-shell-scripts.git
