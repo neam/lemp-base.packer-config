@@ -10,6 +10,8 @@ apt-get install -y -q memcached
 
 apt-get install -y -q sudo
 
+apt-get install -y -q git-flow
+
 cd /volumes/provisioning-shell-scripts/debian-wheezy/
 
 ./nodejs.sh
