@@ -10,9 +10,7 @@ apt-get install -y -q memcached
 
 apt-get install -y -q sudo
 
-git clone https://github.com/neam/provisioning-shell-scripts.git
-
-cd provisioning-shell-scripts/debian-wheezy/
+cd /volumes/provisioning-shell-scripts/debian-wheezy/
 
 ./nodejs.sh
 

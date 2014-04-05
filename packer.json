@@ -4,6 +4,7 @@
         {
             "type": "docker",
             "image": "turnkeylinux/nginx-php-fastcgi-13.0",
+            "run_command": ["run", "-d", "-i", "-t", "-v", "{{.Volumes}}", "-v", "{{pwd}}/provisioning-shell-scripts:/volumes/provisioning-shell-scripts", "{{.Image}}", "/bin/bash"],
             "export_path": "docker.tar"
         }
     ],
