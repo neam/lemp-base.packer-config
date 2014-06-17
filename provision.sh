@@ -4,6 +4,9 @@ cd /root
 mkdir provisioning
 cd provisioning
 
+# install common locales
+locale-gen en_US.UTF-8
+
 apt-get update
 
 apt-get install -y -q memcached
